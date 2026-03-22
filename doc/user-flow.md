@@ -1,13 +1,10 @@
-🔗 Cómo se conecta todo
+Usual user flow:
+`user → route → service → data → view`
 
-Flujo típico:
+Real example:
 
-Usuario → Ruta → Servicio → Datos → Vista
-
-Ejemplo real en tu app:
-
-Usuario entra a /settings
-routes/index.routes.js
-llama a settings.service.js
-lee data/user_configs/user_settings.json
-renderiza settings_view.ejs
+User access to `/settings` route
+app call to `routes/index.routes.js` 
+and get `settings.service.js`
+read `data/user_configs/user_settings.json`
+render `settings_view.ejs`.
