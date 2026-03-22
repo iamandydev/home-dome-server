@@ -5,3 +5,6 @@ Home Dome is designed as a home control ecosystem divided into three components:
 
 ![home dome server diagram](doc/imgs/home-dome-diagram.png)
 
+## Guide
+1. [Folder Structure](doc/folder-structure.md)
+2. [User Flow](doc/user-flow.md)
