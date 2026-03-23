@@ -1,11 +1,17 @@
 import { Router } from "express";
-import "../services/settings.service.js";
+import { getSettings } from "../services/loadSettings.js";
 
 const router = Router();
 
 //render home view
 router.get("/", (req, res) => {
-    res.render("home");
+    const settings = getSettings();
+    res.render("home", {
+        theme: settings.interface.theme,
+        wallpaper: settings.interface.wallpaper,
+        user: settings.preferences.userName
+    });
+    console.log(getSettings());
 });
 
 //render settings view

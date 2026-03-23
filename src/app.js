@@ -1,3 +1,4 @@
+import { loadSettings } from "./services/loadSettings.js";
 import express from "express";
 import morgan from "morgan";
 import { join, dirname } from "path";
@@ -12,6 +13,8 @@ const __dirname = dirname(__filename);
 
 // App
 const app = express();
+//load settings to start
+loadSettings(__dirname);
 // Middleware de logging: muestra en consola las peticiones HTTP (GET, POST, etc.)
 app.use(morgan("dev"));
 // Middleware para parsear JSON en las peticiones (req.body)

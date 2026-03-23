@@ -1,0 +1,44 @@
+:root {
+  /* Definición de colores principales y variables de cristal */
+  --glass-bg: rgba(255, 255, 255, 0.08); /* Fondo de cristal claro */
+  --glass-border: rgba(255, 255, 255, 0.15); /* Borde de cristal sutil */
+  --text-main: #ffffff; /* Texto principal blanco */
+  --text-dim: rgba(255, 255, 255, 0.6); /* Texto atenuado */
+  --accent-blue: #007aff; /* Azul de acento (estilo Apple) */
+  --accent-green: #34c759; /* Verde de acento (estilo Apple) */
+  --active-bg: rgba(255, 255, 255, 0.15); /* Fondo para elementos activos */
+  --widget-border-radius: 20px; /* Radio de borde para widgets principales */
+}
+
+* {
+  box-sizing: border-box; /* Modelo de caja universal */
+  margin: 0;
+  padding: 0;
+  /* Tipografía similar a San Francisco (fuente predeterminada del sistema) */
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+body {
+  /* Fondo de la naturaleza similar al de la imagen para efecto glass */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--text-main);
+}
+
+/* Efecto de desenfoque general para el cuerpo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* Oscurece ligeramente el fondo */
+  backdrop-filter: blur(15px); /* Desenfoque de fondo general */
+  z-index: -1;
+}

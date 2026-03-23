@@ -1,0 +1,17 @@
+{
+    "interface": {
+        "theme": "dark",
+        "wallpaper": "felix-rottmann-coHaj0yeeno-unsplash.jpg",
+        "wallpapers": [],
+        "layout": ["", "", ""]
+    },
+    "preferences": {
+        "userName": "user1",
+        "location": "",
+        "timezone": ""
+    },
+    "asistant": {
+        "active": false,
+        "command": false
+    }
+}
